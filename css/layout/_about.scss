@@ -1,0 +1,50 @@
+.about {
+  background-color: $background-color;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.about-box {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  @include respond(sp) {
+    flex-direction: column;
+  }
+
+
+  &__image{
+    margin-right: 96px;
+    @include respond(sp) {
+      margin: 0 auto;
+    }
+    img {
+      width: 320px;
+    }
+  }
+  &__text {
+    width: 90%;
+    text-align: left;
+    @include respond(sp) {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  &__name {
+    font-size: 2rem;
+    margin-top: 24px;
+    span {
+      color: $main-color;
+    }
+    @include respond(sp) {
+      margin-top: 32px;
+    }
+  }
+  &__introduction {
+    margin-top: 16px;
+  }
+
+}

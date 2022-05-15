@@ -1,0 +1,25 @@
+/*==============================
+MEDIA QUERY
+0 - 600px:  sp
+600- 992px:  tab
+960px -    : pc
+==============================*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == sp {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab {
+    @media only screen and (max-width: 959px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == pc {
+    @media only screen and (min-width: 960px) {
+      @content;
+    }
+  }
+}

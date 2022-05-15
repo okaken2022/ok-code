@@ -1,0 +1,24 @@
+
+.works {
+  background-color: $background-color;
+}
+
+.swiper--wrapper {
+  /* wrapperのサイズを調整 */
+  width: 100%;
+  height: 300px;
+}
+
+.swiper-slide {
+  /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
+  width: 100%;
+  height: auto;
+  line-height: 300px;
+  text-align: center;
+  img {
+    width: 100%;
+    height: 100%;
+    // object-fit: cover;
+    object-position: center;
+  }
+}

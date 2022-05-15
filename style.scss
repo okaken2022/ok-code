@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/*
+Theme Name: OK CODE
+Theme URI: http://ok-code.local/
+Description: OK CODEのテーマです。
+Version: 1.0;
+Author: Kenji Okada
+Author URI: http://ok-code.local/
+*/
+
+//foundation//
+@import "css/foundation/_reset.scss";
+@import "css/foundation/_variable.scss";
+@import "css/foundation/_foundation.scss";
+@import "css/foundation/_mixins.scss";
+
+
+//layout//
+@import "css/layout/_header.scss";
+@import "css/layout/_mainvisual.scss";
+@import "css/layout/_section.scss";
+@import "css/layout/_works.scss";
+@import "css/layout/_service.scss";
+@import "css/layout/_about.scss";
+@import "css/layout/_cta.scss";
+
+//object//
+@import "css/object/_component.scss";
+@import "css/object/_utility.scss";
+@import "css/object/_project.scss";
+@import "css/object/_button.scss";
+
+
+// ------------------layout---------------------
+
+
+
+//------------------mainvisaul----------------------
+
+
+
