@@ -13,38 +13,38 @@
   @include respond(sp) {
     flex-direction: column;
   }
+}
 
+.about-box__image{
+  margin-right: 96px;
+  @include respond(sp) {
+    margin: 0 auto;
+  }
+  img {
+    width: 320px;
+  }
+}
 
-  &__image{
-    margin-right: 96px;
-    @include respond(sp) {
-      margin: 0 auto;
-    }
-    img {
-      width: 320px;
-    }
+.about-box__text {
+  width: 95%;
+  text-align: left;
+  @include respond(sp) {
+    text-align: center;
+    margin: 0 auto;
   }
-  &__text {
-    width: 90%;
-    text-align: left;
-    @include respond(sp) {
-      text-align: center;
-      margin: 0 auto;
-    }
-  }
+}
 
-  &__name {
-    font-size: 2rem;
-    margin-top: 24px;
-    span {
-      color: $main-color;
-    }
-    @include respond(sp) {
-      margin-top: 32px;
-    }
+.about-box__name {
+  font-size: 2rem;
+  margin-top: 24px;
+  span {
+    color: $main-color;
   }
-  &__introduction {
-    margin-top: 16px;
+  @include respond(sp) {
+    margin-top: 32px;
   }
+}
 
+.about-box__introduction {
+  margin-top: 16px;
 }

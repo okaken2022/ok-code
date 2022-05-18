@@ -75,6 +75,26 @@ MEDIA QUERY
 600- 992px:  tab
 960px -    : pc
 ==============================*/
+.header {
+  background-color: #4B4B4B;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 20;
+}
+
+@media only screen and (max-width: 959px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .header__wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -87,12 +107,13 @@ MEDIA QUERY
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 1080px;
-  height: 80px;
   padding: 0 10px;
 }
 
-.header {
-  background-color: #4B4B4B;
+@media only screen and (max-width: 959px) {
+  .header__wrapper {
+    margin: 0;
+  }
 }
 
 .header__logo {
@@ -101,16 +122,72 @@ MEDIA QUERY
   line-height: 80px;
 }
 
-.list {
+@media only screen and (max-width: 600px) {
+  .header__logo {
+    font-size: 1.5rem;
+  }
+}
+
+.header-list {
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.list__item {
+@media only screen and (max-width: 959px) {
+  .header-list {
+    display: none;
+  }
+}
+
+.header-list__item {
   margin-left: 56px;
   font-size: 1.25rem;
+}
+
+.hamburger-icon {
+  display: none;
+  width: 80px;
+  height: 80px;
+  background-color: #F8F8F8;
+  position: relative;
+}
+
+@media only screen and (max-width: 959px) {
+  .hamburger-icon {
+    display: block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.hamburger-icon__line:nth-child(1) {
+  background-color: #4B4B4B;
+  width: 40px;
+  height: 3px;
+  position: absolute;
+  top: 23px;
+  left: 20px;
+}
+
+.hamburger-icon__line:nth-child(2) {
+  background-color: #4B4B4B;
+  width: 40px;
+  height: 3px;
+  position: absolute;
+  top: 39px;
+  left: 20px;
+}
+
+.hamburger-icon__line:nth-child(3) {
+  background-color: #4B4B4B;
+  width: 40px;
+  height: 3px;
+  position: absolute;
+  top: 55px;
+  left: 20px;
 }
 
 .mainvisual {
@@ -126,6 +203,15 @@ MEDIA QUERY
       -ms-flex-align: center;
           align-items: center;
   padding: 0 10px;
+}
+
+@media only screen and (max-width: 959px) {
+  .mainvisual {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media only screen and (max-width: 959px) {
@@ -157,15 +243,6 @@ MEDIA QUERY
 
 .mainvisual__img {
   max-width: 650px;
-}
-
-@media only screen and (max-width: 959px) {
-  .mainvisual {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 
 .section {
@@ -227,7 +304,7 @@ MEDIA QUERY
   padding: 16px;
 }
 
-.service .card {
+.card {
   width: 31%;
   -webkit-box-shadow: 0 0 12px rgba(60, 60, 60, 0.2);
           box-shadow: 0 0 12px rgba(60, 60, 60, 0.2);
@@ -235,22 +312,22 @@ MEDIA QUERY
 }
 
 @media only screen and (max-width: 600px) {
-  .service .card {
+  .card {
     width: 100%;
     margin-bottom: 32px;
   }
 }
 
-.service .card__image {
+.card__image {
   text-align: center;
 }
 
-.service .card__image img {
+.card__image img {
   display: inline;
   width: 220px;
 }
 
-.service .card__title {
+.card__title {
   font-family: Hiragino Kaku Gothic ProN W6;
   text-align: left;
   font-weight: bold;
@@ -259,12 +336,12 @@ MEDIA QUERY
 }
 
 @media only screen and (max-width: 600px) {
-  .service .card__title {
+  .card__title {
     font-size: 1rem;
   }
 }
 
-.service .card__title::after {
+.card__title::after {
   content: "";
   display: block;
   width: 100%;
@@ -274,13 +351,13 @@ MEDIA QUERY
   bottom: 0;
 }
 
-.service .card__text {
+.card__text {
   margin-top: 8px;
   text-align: left;
 }
 
 @media only screen and (max-width: 600px) {
-  .service .card__text {
+  .card__text {
     font-size: 0.875rem;
   }
 }
@@ -326,7 +403,7 @@ MEDIA QUERY
 }
 
 .about-box__text {
-  width: 90%;
+  width: 95%;
   text-align: left;
 }
 
@@ -390,6 +467,17 @@ MEDIA QUERY
   right: 0;
   left: 0;
   top: 200px;
+}
+
+.footer {
+  background-color: #4B4B4B;
+  text-align: center;
+}
+
+.footer__text {
+  color: white;
+  font-size: 0.875rem;
+  line-height: 40px;
 }
 
 .section__title-en {

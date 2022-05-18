@@ -5,34 +5,35 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
-
-  &__text {
-
-    @include respond(tab) {
-      text-align: center;
-    }
-
-  }
-
-  &__copy {
-    font-size: 2.25rem;
-    @include respond(sp) {
-      font-size: 1.5rem;
-    }
-  }
-  &__title {
-    font-size: 4.5rem;
-    color: $main-color;
-    @include respond(sp) {
-      font-size: 3.5rem;
-    }
-  }
-  &__img {
-    // margin-top: 75px;
-    max-width: 650px;
-  }
   @include respond(tab) {
     flex-direction: column;
   }
+
 }
 
+.mainvisual__text {
+  @include respond(tab) {
+    text-align: center;
+  }
+}
+
+.mainvisual__copy {
+  font-size: 2.25rem;
+
+  @include respond(sp) {
+    font-size: 1.5rem;
+  }
+}
+
+.mainvisual__title {
+  font-size: 4.5rem;
+  color: $main-color;
+
+  @include respond(sp) {
+    font-size: 3.5rem;
+  }
+}
+
+.mainvisual__img {
+  max-width: 650px;
+}

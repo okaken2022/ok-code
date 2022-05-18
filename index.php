@@ -1,6 +1,7 @@
 <?php get_header();?>
 
-<body>
+<body <?php body_class();?>>
+  <?php wp_body_open();?>
   <div class="mainvisual">
     <div class="mainvisual__text">
       <h2 class="mainvisual__copy">みやすい、<br>Webサイトつくります</h2>
@@ -100,9 +101,4 @@
     </div>
   </div>
 
-  <footer>
-    <p>&copy; OK CODE</p>
-  </footer>
-  <script src="<?php echo get_template_directory_uri();?>/js/main.js"></script>
-</body>
-</html>
+  <?php get_footer();?>
