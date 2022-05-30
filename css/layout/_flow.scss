@@ -1,0 +1,119 @@
+.flow.section {
+  max-width: 815px;
+  padding-top: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.flow-steps {
+
+}
+
+.flow-step__item {
+  display: flex;
+  @include respond(sp) {
+   flex-direction: column;
+  }
+}
+
+
+// ------------------------------------------------
+// flow-step__number
+// ------------------------------------------------
+.flow-step__number {
+  width: 72px;
+  @include respond(sp) {
+    margin: 0 auto;
+  }
+}
+
+.flow-step__circle {
+  display: flex;
+  width: 72px;
+  height: 72px;
+  border-radius: 50px;
+  background-color: $main-color;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  p {
+    display: block;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    &:nth-of-type(1) {
+      position: absolute;
+      top: 10px;
+    }
+    &:nth-of-type(2) {
+      position: absolute;
+      top: 21px;
+      font-size: 2rem;
+    }
+  }
+}
+
+.flow-step__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: $main-color;
+  margin: 24px auto;
+  &:nth-of-type(2) {
+    margin-top: 11px;
+  }
+  &:nth-of-type(6) {
+    margin-bottom: 11px;
+  }
+  @include respond(sp) {
+    display: none;
+  }
+}
+
+
+// ------------------------------------------------
+// flow-step__img
+// ------------------------------------------------
+.flow-step__image {
+  margin: 0 10px;
+  position: relative;
+  img {
+    width: 200px;
+
+    @include respond(sp) {
+      position:absolute;
+      top: -20px;
+      left: 50%;
+      margin-left: -100px;
+    }
+  }
+}
+
+
+// ------------------------------------------------
+// flow-step__text_part
+// ------------------------------------------------
+.flow-step__text-part {
+  text-align: left;
+  width: 490px;
+  @include respond(sp) {
+    width: 100%;
+    padding: 120px 15px 56px;
+  }
+}
+
+.flow-step__title {
+  font-size: $size-l;
+  margin: 19px 0  16px 0;
+  @include respond(sp) {
+    font-size: $size-m;
+    margin-bottom: 8px;
+  }
+}
+
+.flow-step__text {
+  @include respond(sp) {
+    font-size: $size-s;
+  }
+}

@@ -9,35 +9,44 @@ Author: Kenji Okada
 Author URI: http://ok-code.local/
 */
 
-//foundation//
+// ------------------------------------------------
+// foundation
+// ------------------------------------------------
 @import "css/foundation/_reset.scss";
 @import "css/foundation/_variable.scss";
-@import "css/foundation/_foundation.scss";
+@import "css/foundation/_base.scss";
 @import "css/foundation/_mixins.scss";
 
 
-//layout//
+// ------------------------------------------------
+// layout
+// ------------------------------------------------
 @import "css/layout/_header.scss";
 @import "css/layout/_mainvisual.scss";
-@import "css/layout/_section.scss";
-@import "css/layout/_works.scss";
-@import "css/layout/_service.scss";
-@import "css/layout/_about.scss";
-@import "css/layout/_cta.scss";
 @import "css/layout/_footer.scss";
-
-//object//
-@import "css/object/_component.scss";
-@import "css/object/_utility.scss";
-@import "css/object/_project.scss";
-@import "css/object/_button.scss";
+@import "css/layout/_single-work.scss";
+@import "css/layout/_price.scss";
+@import "css/layout/_flow.scss";
+@import "css/layout/_contact.scss";
 
 
-// ------------------layout---------------------
+// ------------------------------------------------
+// object/component
+// ------------------------------------------------
+@import "css/object/component/button.scss";
+@import "css/object/component/_section-title.scss";
 
 
+// ------------------------------------------------
+// object/project
+// ------------------------------------------------
+@import "css/object/project/_cta.scss";
+@import "css/object/project/_about.scss";
+@import "css/object/project/_works.scss";
+@import "css/object/project/_service.scss";
 
-//------------------mainvisaul----------------------
 
-
-
+// ------------------------------------------------
+// object/utility
+// ------------------------------------------------
+@import "css/object/utility/_padding.scss";

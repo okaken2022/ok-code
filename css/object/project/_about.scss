@@ -47,4 +47,7 @@
 
 .about-box__introduction {
   margin-top: 16px;
+  @include respond(sp) {
+    font-size: $size-s;
+  }
 }

@@ -1,0 +1,109 @@
+.contact {
+  max-width: 700px;
+}
+
+.contact__form {
+  padding: 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: left;
+  @include respond(sp) { 
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+
+  dt {
+    width: 30%;
+    line-height: 2.5;
+    @include respond(sp) { 
+      width: 100%;
+    }
+  }
+  dd {
+    width: 70%;
+    @include respond(sp) { 
+      width: 100%;
+    }
+  }
+}
+
+.contact__must {
+  font-family: $font-ja;
+  font-size: 0.625rem;
+  padding: 1px 2px;
+  color: white;
+  background-color: $main-color;
+  margin-left: 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: solid 1px #c8c8c8;
+  padding: 8px;
+  margin-bottom: 10px;
+  @include respond(sp) { 
+    margin-bottom: 16px;
+  }
+}
+input[type="submit"],
+input[type="button"], {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+}
+input[type="submit"]:hover {
+  opacity: 0.7;
+}
+
+.contact-state {
+  margin: 0 auto 120px; 
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+  width: 480px;
+  position: relative;
+  @include respond(sp) { 
+    width: 320px;
+    margin-bottom: 40px;
+  }
+}
+.contact-state__list {
+  color: #B5B5B5;
+  &:first-child::after {
+    position: absolute ;
+    top: 11px;
+    left: 47px;
+    display: inline-block;
+    content: "";
+    background-color: #B5B5B5;
+    height: 2px;
+    width: 160px;
+    @include respond(sp) { 
+      width: 80px;
+    }
+    
+  }
+
+  &:last-child::before {
+    position: absolute ;
+    top: 11px;
+    left: 272px;
+    display: inline-block;
+    content: "";
+    background-color: #B5B5B5;
+    height: 2px;
+    width: 160px;
+    @include respond(sp) { 
+      width: 80px;
+      left: 192px;
+    }
+  }
+
+  &.current {
+    color: #333333;
+    font-weight: bold;
+  }
+
+}

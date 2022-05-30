@@ -6,6 +6,9 @@
   padding: 120px 0 200px 0;
   text-align: center;
   position: relative;
+  @include respond(sp) { 
+    padding: 80px 0 200px 0;
+  }
 }
 
 .cta__text {
@@ -15,7 +18,11 @@
   font-size: 1.25rem;
   color: white;
   font-weight: bold;
-  
+  @include respond(sp) { 
+    font-size: 1rem;
+    width: 360px;
+    margin: 0 auto;
+  }
 }
 
 .cta__mask {
@@ -33,5 +40,8 @@
   right: 0;
   left: 0;
   top: 200px;
-  
+  @include respond(sp) { 
+    top: 180px;
+
+  }
 }

@@ -1,0 +1,94 @@
+.price {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.price.section {
+  padding-top: 160px;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include respond(sp) {
+    padding-top: 80px;
+  }
+}
+
+.price-cards {
+  
+}
+
+.price-cards__card {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  @include respond(sp) {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  &:nth-of-type(2) {
+    flex-direction: row-reverse;
+    @include respond(sp) {
+      flex-direction: column;
+    }
+  }
+}
+
+.price-cards__img {
+  margin: 0 24px;
+  img {
+    width: 340px;
+  }
+}
+
+.price-cards__text-part {
+  width: 55%;
+  text-align: left;
+  @include respond(sp) {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+.price-cards__title {
+  font-family: $font-ja;
+  font-weight: bold;
+  font-size: 1.25rem;
+  position: relative;
+  margin-bottom: 20px;
+
+  @include respond(sp) {
+    font-size: $size-m;
+  }
+
+  // カードタイトルの下線
+  &::after{
+    content: "";
+    display:block;
+    width:100%;
+    height:2px;
+    background-color: $main-color;
+    position:absolute;
+    bottom:0;
+  }
+}
+
+.price-cards__text {
+  margin-bottom: 12px;
+  @include respond(sp) {
+    font-size: $size-s;
+  }
+}
+
+.price-cards__price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include respond(sp) {
+    font-size: $size-s;
+  }
+  dt {
+    width: 84%;
+  }
+  dd {
+    width: 16%;
+  }
+}

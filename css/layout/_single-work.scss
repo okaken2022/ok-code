@@ -1,0 +1,51 @@
+.work__container{
+  display: flex;
+  max-width: 1080px;
+  padding: 0 10px;
+  margin: 0 auto 80px;
+  @include respond(sp) { 
+    flex-direction: column-reverse;
+
+  }
+}
+
+.work__text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50%;
+  text-align: left;
+
+  @include respond(sp) { 
+    width: 100%
+  }
+  dt {
+    width: 30%;
+  }
+  dd {
+    width: 60%;
+    margin-bottom: 16px;
+    h1 {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+  }
+}
+
+.work__image {
+  width:50%;
+  @include respond(sp) { 
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
+
+.post-link {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  a {
+    color: $text-color;
+  }
+}

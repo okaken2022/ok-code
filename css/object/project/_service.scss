@@ -40,7 +40,7 @@
   font-family: Hiragino Kaku Gothic ProN W6;
   text-align: left;
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: $size-l;
   position: relative;
 
   @include respond(sp) {
@@ -64,6 +64,6 @@
   text-align: left;
   
   @include respond(sp) {
-    font-size: 0.875rem;
+    font-size: $size-s;
   }
 }
