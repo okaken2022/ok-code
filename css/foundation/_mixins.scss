@@ -10,6 +10,12 @@ MEDIA QUERY
       @content;
     }
   }
+  
+  @if $breakpoint == s-tab {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  }
 
   @if $breakpoint == tab {
     @media only screen and (max-width: 959px) {

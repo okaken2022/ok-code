@@ -1,0 +1,62 @@
+.work-list {
+  padding: 200px 10px 120px 10px;
+  background-color: $background-color;
+  @include respond(sp) {
+    padding-top: 120px;
+  }
+}
+
+.work-list__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 80px;
+  column-gap: 16px;
+  max-width: 1080px;
+  margin: 0 auto;
+  justify-content: space-between;
+  @include respond(sp) {
+    padding: 0 10px;
+  }
+}
+
+.work-list__item {
+  text-align: left;
+  img {
+    filter: drop-shadow(0px 4px 12px rgba(60, 60, 60, 0.25));
+    transition: all 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+    @include respond(sp) {
+      width: 100%;
+    }
+  }
+}
+
+.work-list__title {
+  font-size: $size-l;
+  font-weight: normal;
+  @include respond(sp) {
+    padding-left: 0;
+  }
+}
+.pagination {
+  margin-top: 64px;
+}
+.page-numbers {
+  display: flex;
+  justify-content: center;
+  font-size: $size-l;
+  a {
+    color: $text-color;
+    border: solid 1px $text-color;
+    padding: 1px 4px;
+    margin: 0 8px;
+  }
+  &.current {
+    color: white;
+    background-color: $header-color;
+    padding: 1px 4px;
+    border: solid 1px $text-color;
+  }
+}

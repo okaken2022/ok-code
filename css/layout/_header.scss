@@ -26,7 +26,11 @@
 .header__logo {
   color: #ffffff;
   font-size: 2.2rem;
+  font-weight: bold;
+  font-family: $font-en;
   line-height: 80px;
+  position: relative;
+  z-index: 30;
   @include respond(sp) {
     font-size: 1.5rem;
   }
@@ -41,8 +45,13 @@
 }
 
 .header-list__item {
+  font-family: $font-en;
   margin-left: 56px;
   font-size: $size-l;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 
@@ -55,7 +64,8 @@
   height: 80px;
   background-color: $background-color;
   position: relative;
-
+  z-index: 30;
+  cursor: pointer;
   @include respond(tab) {
     display: block;
     align-items: center;
@@ -63,7 +73,8 @@
   }
 }
 
-.hamburger-icon__line {
+.hamburger-icon span {
+  transition: all .4s;/*アニメーションの設定*/
   &:nth-child(1) {
     background-color: $header-color;
     width: 40px;
@@ -88,4 +99,59 @@
     top: 55px;
     left: 20px;
   }
+}
+.hamburger-icon.is-active span {
+  &:nth-child(1) {
+    top: 33px;
+    transform: translateY(6px) rotate(-45deg);
+  }
+  &:nth-child(2) {
+    opacity: 0;
+  }
+  &:nth-child(3) {
+    top: 45px;
+    transform: translateY(-6px) rotate(45deg);
+  }
+}
+
+.hamburger__mask{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $header-color;
+}
+.hamburger__list {
+  padding-left: 0;
+}
+.hamburger__item{
+  font-family: $font-en;
+  width: 100%;
+  height: auto;
+  padding: 24px 0;
+  font-size: $size-l;
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+/* アニメーション前のメニューの状態 */
+.hamburger__mask {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .3s linear;
+}
+/* アニメーション後のメニューの状態 */
+.hamburger__mask.is-active{
+  pointer-events: auto;
+  opacity: 1;
 }

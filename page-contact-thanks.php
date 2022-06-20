@@ -10,9 +10,18 @@
         <li class="contact-state__list <?php if( is_page('contact-check') ) { echo 'current'; } ?>">確認</li>
         <li class="contact-state__list <?php if( is_page('contact-thanks') ) { echo 'current'; } ?>">完了</li>
       </ul>
+
       <?php the_post_thumbnail(); ?>
       <div class="text"><?php the_content(); ?></div>
     <?php endwhile;endif; ?>
+    <div class="button">
+      <a href="<?php echo home_url()?>" class="btn btn-svg">
+        <svg>
+          <rect x="2" y="2" rx="0" fill="none" width=200 height="50"></rect>
+        </svg>
+        <span>ホームへ戻る</span>
+      </a>
+    </div>
   </section>
 </main>
 

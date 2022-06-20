@@ -12,7 +12,7 @@
         <dt>コンセプト：</dt>
         <dd><?php echo post_custom('3.コンセプト');?></dd>
         <dt>参考URL：</dt>
-        <dd><?php echo post_custom('4.参考URL');?></dd>
+        <dd><a href="<?php echo post_custom('5.参考URLリンク');?>"><?php echo post_custom('4.参考URL');?></a></dd>
       </dl>
       <div class="work__image">
       <?php if(first_image()): ?>
@@ -26,6 +26,14 @@
       <li><?php echo post_custom('1.サイト名');?></li>
       <li><?php next_post_link('%link', '次のページ >'); ?></li>
     </ul>
+    <div class="button">
+      <a href="<?php echo home_url('/work-list'); ?>" class="btn btn-svg">
+        <svg>
+          <rect x="2" y="2" rx="0" fill="none" width=200 height="50"></rect>
+        </svg>
+        <span>実績一覧に戻る</span>
+      </a>
+    </div>
   </div>
 </main>
 

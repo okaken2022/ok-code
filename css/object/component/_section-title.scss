@@ -1,5 +1,6 @@
 .section__title-en {
   color: $main-color;
+  font-family: $font-en;
   font-size: 2.625rem;
   
   @include respond(sp) {

@@ -1,5 +1,6 @@
 .mainvisual {
   max-width: 1080px;
+  height: 600px;
   margin: 100px auto 0;
   display: flex;
   justify-content: space-between;
@@ -7,6 +8,7 @@
   padding: 0 10px;
   @include respond(tab) {
     flex-direction: column;
+    justify-content:space-around
   }
 
 }
@@ -28,7 +30,7 @@
 .mainvisual__title {
   font-size: 4.5rem;
   color: $main-color;
-
+  font-family: $font-en;
   @include respond(sp) {
     font-size: 3.5rem;
   }

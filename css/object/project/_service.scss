@@ -8,7 +8,7 @@
   padding-left: 10px;
   padding-right: 10px;
 
-  @include respond(sp) {
+  @include respond(s-tab) {
     flex-direction: column;
   }
 }
@@ -22,11 +22,14 @@
   box-shadow: 0 0 12px rgba(60, 60, 60, 0.2);
   padding: 16px;
 
-  @include respond(sp) {
+  @include respond(s-tab) {
     width: 100%;
     margin-bottom: 32px;
   }
+  
 }
+
+
 
 .card__image {
   text-align: center;

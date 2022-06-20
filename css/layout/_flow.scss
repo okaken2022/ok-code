@@ -1,6 +1,6 @@
 .flow.section {
   max-width: 815px;
-  padding-top: 0;
+  padding-top: 120;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -29,6 +29,7 @@
 }
 
 .flow-step__circle {
+  font-family: $font-en;
   display: flex;
   width: 72px;
   height: 72px;

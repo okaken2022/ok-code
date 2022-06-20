@@ -1,0 +1,61 @@
+.fade-in {
+  opacity: 0;
+  transition-duration: .5s;
+  transition-property: opacity, transform;
+}
+
+.fade-in-up {
+  transform: translate(0, 50px);
+}
+
+.fade-in-down {
+  transform: translate(0, -50px);
+}
+
+.fade-in-left {
+  transform: translate(-50px, 0);
+}
+
+.fade-in-right {
+  transform: translate(50px, 0);
+}
+
+.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+
+}
+
+.delay-time02 {
+  transition-delay: .2s;
+
+}
+
+.delay-time04 {
+  transition-delay: .4s;
+}
+
+.zoom {
+  opacity: 0;
+}
+
+.zoom-in{
+  opacity: 1;
+  animation-name:zoomInAnime;
+  animation-duration:0.8s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes zoomInAnime{
+  0% {
+  transform: scale(0.3);
+  }
+
+  85% {
+      transform: scale(1.1);
+  }
+
+  100% {
+      transform: scale(1);
+  }
+}
